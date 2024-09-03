@@ -35,7 +35,6 @@ const EnrollModal = () => {
 
         localStorage.setItem('student', JSON.stringify(data));
         dispatch(addStudentDetails(data));
-        hideModal();
     };
 
     const doEnrollInCourse = () => {

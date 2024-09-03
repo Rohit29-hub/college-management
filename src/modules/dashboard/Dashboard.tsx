@@ -4,15 +4,15 @@ import { Course } from '../../redux/slices/studentReducer';
 
 const Dashboard = () => {
     const student = useAppSelector(state => state.student.student);
-    const {showModal} = useEnroll();
+    const { showModal } = useEnroll();
 
     if (!student) {
         return (
-                <div className='flex items-center flex-col gap-y-3 justify-center w-full h-screen text-base'>
-                    <p>Student's data not found.</p>
-                    <button onClick={showModal} className="bg-red-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-600 transition-colors duration-300">Register</button>
-                </div>
-            )
+            <div className='flex items-center flex-col gap-y-3 justify-center w-full h-screen text-base'>
+                <p>Student's data not found.</p>
+                <button onClick={showModal} className="bg-red-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-600 transition-colors duration-300">Register</button>
+            </div>
+        )
     }
 
     const {
